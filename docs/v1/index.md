@@ -73,7 +73,7 @@ Finally, compare seqs collapses on binding sites that appear in the same locatio
   
 ## Example Data
 
-[Example input data is available on github](https://github.com/genepattern/tfsites.CompareTfSitesAcrossEnhancers/gpuinit/data)
+[Example input data is available on github](https://github.com/genepattern/tfsites.CompareTfSitesAcrossSequences/gpunit/data)
     
 ## References
 
