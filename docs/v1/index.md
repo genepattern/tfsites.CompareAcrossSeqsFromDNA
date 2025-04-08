@@ -36,11 +36,11 @@ Finally, compare seqs collapses on binding sites that appear in the same locatio
 
 ### Input and Outputs
 
-- <span style="color: red;">*</span>**enhancer DNA alignment table data (.tsv)**
+- **enhancer DNA alignment table data (.tsv)**<span style="color: red;">*</span>
     - Tab-separated file containing at least two DNA sequences to be analyzed. We suggest only inputting the alignment +/- 15 bp from where the genetic variation of interest occurs. if this is a SNV, you would simply input the 30bp window of the alignment containing the variant. If this is a deletion, you would add 15 bp upstream of the first “-” and 15bp downstream of the last “-”. 
-- <span style="color: red;">*</span>**enhancer functional group table (.tsv)**
+- **enhancer functional group table (.tsv)**<span style="color: red;">*</span>
     - Tab-separated file which labels each functional group. Functional group can be either wild-type, control, test, or na. If “na”, all enhancers associated with that label will be removed from the analysis. Binding sites are searched for within the “test” group that are not present within the “wild-type” or “control” group. At a minimum both of these requirements must be met, (1) at least one “control” or “wild-type” must be provided; (2) at least one “test” must be provided.
-- <span style="color: red;">*</span>**Either tf affinity information (.tsv) or motif input file (JASPAR format) or both must be provided.**
+<span style="color: red;">*</span>**Either tf affinity information (.tsv) or motif input file (JASPAR format) or both must be provided.**
 - **tf affinity information (.tsv)**
     -   File containing  all the information for the transcription factors being analyzed, including its name, binding site definition, desired color on the plot, any PBM relative affinity data, and any PFM relative score data. 
 - **motif input file (JASPAR format)**
@@ -48,11 +48,11 @@ Finally, compare seqs collapses on binding sites that appear in the same locatio
 
 ### Other Parameters
 
-- <span style="color: red;">*</span>**analysis name**
+- **analysis name**<span style="color: red;">*</span>
     - Name of the analysis. Used as the prefix of all output filenames.
-- <span style="color: red;">*</span>**hypothesis**
+- **hypothesis**<span style="color: red;">*</span>
     - In the genetic variant do you expect a gain of a site, loss of a site, or would you like to search for both? Default is "Both".
-- <span style="color: red;">*</span>**minimum binding change (float)**
+- **minimum binding change (float)**<span style="color: red;">*</span>
     - The minimum change of affinity or PWM binding score classify as “increase” or “decrease” in score or affinity. Default is 0.1.
 
 
