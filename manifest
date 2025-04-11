@@ -73,11 +73,11 @@ p4_type=java.io.File
 p4_value=
 
 
-p5_MODE=
+p5_MODE=IN
 p5_TYPE=FILE
 p5_default_value=
 p5_description=(optional) JASPAR formatted file with multiple motifs. These can be PFMs as counts or fractions, or PWMs.
-p5_fileFormat=
+p5_fileFormat=JASPAR;tsv
 p5_flag=
 p5_name=motif.input.file
 p5_numValues=0..1
