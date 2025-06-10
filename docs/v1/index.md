@@ -1,4 +1,4 @@
-# tfsites.CompareTfSitesAcrossSequences v1
+# tfsites.CompareAcrossSeqsFromDNA v1
 
 **Author(s):** Joe Solvason  
 
@@ -13,7 +13,7 @@
 
 ## Introduction
 
-`tfsites.CompareTfSitesAcrossSequencess` tool fills this need by taking in a multiple sequence alignment of two or more enhancers to map how sequence variation impacts function of TF binding sites. In biomedical applications, comparisons can be made between reference and alternate alleles that are associated with diseases or changes in gene expression. In biomedical applications, `tfsites.CompareTfSitesAcrossSequencess` can be used to determine which binding sites are lost, gained, or changed across genetic variants of enhancers. In evolutionary applications, `tfsites.CompareTfSitesAcrossSequencess` can be used to determine which binding sites are lost, gained, or changed within a particular clade of species.
+`tfsites.CompareAcrossSeqsFromDNA` tool fills this need by taking in a multiple sequence alignment of two or more enhancers to map how sequence variation impacts function of TF binding sites. In biomedical applications, comparisons can be made between reference and alternate alleles that are associated with diseases or changes in gene expression. In biomedical applications, `tfsites.CompareAcrossSeqsFromDNA` can be used to determine which binding sites are lost, gained, or changed across genetic variants of enhancers. In evolutionary applications, `tfsites.CompareAcrossSeqsFromDNA` can be used to determine which binding sites are lost, gained, or changed within a particular clade of species.
 
  
 ## Methodology
@@ -75,7 +75,7 @@ Finally, compare seqs collapses on binding sites that appear in the same locatio
   
 ## Example Data
 
-[Example input data is available on github](https://github.com/genepattern/tfsites.CompareTfSitesAcrossSequences/gpunit/data)
+[Example input data is available on github](https://github.com/genepattern/tfsites.CompareAcrossSeqsFromDNA/gpunit/data)
     
 ## References
 
