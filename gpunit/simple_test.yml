@@ -7,8 +7,8 @@
 # Note: this test uses a custom diff command
 #
 
-name: "tfsites.CompareTfSitesAcrossSequences - Basic test"
-module: tfsites.CompareTfSitesAcrossSequences
+name: " -tfsites.CompareAcrossSeqsFromDNA Basic test"
+module: tfsites.CompareAcrossSeqsFromDNA
 params:
     enhancer.DNA.alignment.table.data: "data/06-input_aligned-enhancers.tsv" 
     enhancer.functional.group.table: "data/"06-input_group-labels.tsv
