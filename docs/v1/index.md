@@ -1,6 +1,6 @@
 # tfsites.CompareAcrossSeqsFromDNA v1
 
-**Author(s):** Joe Solvason, Maggie Ma, Simran Jandu
+**Author(s):** Joe Solvason, Maggie Ma
 
 **Contact:** Joe Solvason (solvason@ucsd.edu)
 
