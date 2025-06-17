@@ -13,7 +13,7 @@
 
 ## Introduction
 
-`tfsites.CompareAcrossSeqsFromDNA` takes in a multiple sequence alignment of two or more enhancers to map how sequence variation impacts function of TF binding sites. In biomedical applications, this tool can be used to determine which binding sites are lost, gained, or changed across genetic variants of enhancers. In evolutionary applications, this tool can be used to determine which binding sites are lost, gained, or changed within a particular clade of species.
+`tfsites.CompareAcrossSeqsFromDNA` takes in a multiple sequence alignment of two or more enhancers to map how sequence variation impacts function of TF binding sites. In evolutionary applications, this tool can be used to determine which binding sites are lost, gained, or changed within a particular clade of species.
 
  
 ## Methodology
