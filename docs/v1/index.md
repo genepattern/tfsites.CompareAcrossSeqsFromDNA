@@ -1,8 +1,8 @@
 # tfsites.CompareAcrossSeqsFromDNA v1
 
-**Author(s):** Joe Solvason  
+**Author(s):** Joe Solvason, Maggie Ma, Simran Jandu
 
-**Contact:** Joe Solvason (solvason@eng.ucsd.edu)
+**Contact:** Joe Solvason (solvason@ucsd.edu)
 
 **Adapted as a GenePattern Module by:** Ted Liefeld (jliefeld@cloud.ucsd.edu)
 
@@ -13,7 +13,7 @@
 
 ## Introduction
 
-`tfsites.CompareAcrossSeqsFromDNA` tool fills this need by taking in a multiple sequence alignment of two or more enhancers to map how sequence variation impacts function of TF binding sites. In biomedical applications, comparisons can be made between reference and alternate alleles that are associated with diseases or changes in gene expression. In biomedical applications, `tfsites.CompareAcrossSeqsFromDNA` can be used to determine which binding sites are lost, gained, or changed across genetic variants of enhancers. In evolutionary applications, `tfsites.CompareAcrossSeqsFromDNA` can be used to determine which binding sites are lost, gained, or changed within a particular clade of species.
+`tfsites.CompareAcrossSeqsFromDNA` takes in a multiple sequence alignment of two or more enhancers to map how sequence variation impacts function of TF binding sites. In biomedical applications, this tool can be used to determine which binding sites are lost, gained, or changed across genetic variants of enhancers. In evolutionary applications, this tool can be used to determine which binding sites are lost, gained, or changed within a particular clade of species.
 
  
 ## Methodology
@@ -44,7 +44,7 @@ Finally, compare seqs collapses on binding sites that appear in the same locatio
 <span style="color: red;">*</span>**Either tf affinity information (.tsv) or motif input file (JASPAR format) or both must be provided.**
 
 - **tf affinity information (.tsv)**
-    -   File containing  all the information for the transcription factors being analyzed, including its name, binding site definition, desired color on the plot, any PBM relative affinity data, and any PFM relative score data. 
+    -   File containing  all the information for the transcription factors being analyzed, including its name, core site definition, and any PBM relative affinity data (optional).
 - **motif input file (JASPAR format)**
     - JASPAR formatted file with multiple motifs. These can be PFMs as counts or fractions, or PWMs.
 
@@ -53,24 +53,63 @@ Finally, compare seqs collapses on binding sites that appear in the same locatio
 - **analysis name**<span style="color: red;">*</span>
     - Name of the analysis. Used as the prefix of all output filenames.
 - **hypothesis**<span style="color: red;">*</span>
-    - In the genetic variant do you expect a gain of a site, loss of a site, or would you like to search for both? Default is "Both".
-- **minimum binding change (float)**<span style="color: red;">*</span>
-    - The minimum change of affinity or PWM binding score classify as “increase” or “decrease” in score or affinity. Default is 0.1.
+    - In the genetic variant do you expect a gain of a site, loss of a site, or would you like to search for both? Default is `both`.
+- **minimum binding change (float)**
+    - The minimum change of affinity or PWM binding score required to classify an “increase” or “decrease.” Default is `0.1`.
+- **minimum pwm score (float)**
+    - The minimum PWM binding score required to predict a site. Default is `0.8`.
 
 
 ## Input Files
  
 1.  enhancer alignment table data (.tsv)
+```
+name     alignment	                                 group
+Human    ACATA-------AGCAACATCCTGACCAATTATCCAAACCA	 human
+Mouse    ACATA-A-TGACAGCAACATCCTGACCAATTATCCAAACCA	 mouse
+Python   ATGGA-AGTAATTTTGAAAC-----CCAATTGTGCAAAGCA	 serpintized
+Cow      ACATA-AGTGACAGCAACATCCTGACCAATTACCGAAGCCA	 na
+```
+
 2.  enhancer functional group table (.tsv)
+```
+group         label
+human         wild-type
+mouse         control
+serpintized   test
+na            na
+```
+  
 3.  tf affinity information (.tsv)
-4.  motif input file (JASPAR format)     
+- Assumes header is present
+- Columns:
+    - `TF Name:` name of the transcription factor
+    - `Core Site:` minimal IUPAC binding site definition for transcription factor 
+    - `Affinity Data (optional):` name of the relative affinity data file
+ 
+```
+TF Name    Core Site    Affinity Data
+ETS        NNGGAWNN     input_ets1-pbm.tsv    
+ETS-only   NNGGAWNN
+```
+   
+4.  motif input file (JASPAR format)
+- Can provide multiple PWMs 
+
+```
+>MA1113.3	PBX2
+A  [  4925  26620    225  24368  27245  27259    704   2298  25945 ]
+C  [ 19645    629    588   2266    574    754    453  23894    848 ]
+G  [  1585   1710    317    817    343    569    327    555    352 ]
+T  [  3441    637  28466   2145   1434   1014  28112   2849   2451 ]
+```     
        
 ## Output Files
 
-- **tf affinity information (.tsv)**
-    - An output report of the predicted altered binding sites. Each associated PWM or binding affinity data is provided for every sequence variant. HTML reports are separated into ablations (abl), decreases (dec), de novos (dnv) and increases (inc).
-- **altered binding site table (.tsv)**
+- **differential binding sites (.tsv)**
     - This table contains all binding sites with unique IDs (which match those in the HTML report). It also ranks the binding sites by how LOF or GOF they are. Each row is a predicted binding site for a genetic variant, which also contains the calculated binding scores or affinities. 
+- **folders with html reports**
+    - An output report of the predicted altered binding sites. Each associated PWM or binding affinity data is provided for every sequence variant. HTML reports are separated into ablations (abl), decreases (dec), de novos (dnv) and increases (inc).
     
   
 ## Example Data
