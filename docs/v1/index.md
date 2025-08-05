@@ -36,9 +36,9 @@ Finally, compare seqs collapses on binding sites that appear in the same locatio
 
 ### Input and Outputs
 
-- **enhancer DNA alignment table data (.tsv)**<span style="color: red;">*</span>
+- <span style="color: red;">*</span>**enhancer DNA alignment table data (.tsv)**
     - Tab-separated file containing at least two DNA sequences to be analyzed. We suggest only inputting the alignment +/- 15 bp from where the genetic variation of interest occurs. if this is a SNV, you would simply input the 30bp window of the alignment containing the variant. If this is a deletion, you would add 15 bp upstream of the first “-” and 15bp downstream of the last “-”. 
-- **enhancer functional group table (.tsv)**<span style="color: red;">*</span>
+- <span style="color: red;">*</span>**enhancer functional group table (.tsv)**
     - Tab-separated file which labels each functional group. Functional group can be either wild-type, control, test, or na. If “na”, all enhancers associated with that label will be removed from the analysis. Binding sites are searched for within the “test” group that are not present within the “wild-type” or “control” group. At a minimum both of these requirements must be met, (1) at least one “control” or “wild-type” must be provided; (2) at least one “test” must be provided.
 
 <span style="color: red;">*</span>**Either tf affinity information (.tsv) or motif input file (JASPAR format) or both must be provided.**
@@ -52,9 +52,9 @@ Finally, compare seqs collapses on binding sites that appear in the same locatio
 
 ### Other Parameters
 
-- **analysis name**<span style="color: red;">*</span>
+- <span style="color: red;">*</span>**analysis name**
     - Name of the analysis. Used as the prefix of all output filenames.
-- **hypothesis**<span style="color: red;">*</span>
+- <span style="color: red;">*</span>**hypothesis**
     - In the genetic variant do you expect a gain of a site, loss of a site, or would you like to search for both? Default is `both`.
 - **minimum binding change (float)**
     - The minimum change of affinity or PWM binding score required to classify an “increase” or “decrease.” Default is `0.1`.
