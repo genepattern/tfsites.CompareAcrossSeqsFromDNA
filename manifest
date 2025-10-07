@@ -29,7 +29,8 @@ p10_prefix=--motif_input_format
 p10_prefix_when_specified=--motif_input_format   
 p10_type=java.lang.String
 p10_userSuppliedValuesOK=False
-p10_value=
+p10_value=pfm=PFM;pwm=PWM
+
 p11_MODE=IN
 p11_TYPE=FILE
 p11_default_value=
@@ -44,6 +45,7 @@ p11_prefix_when_specified=--motif_filter_keywords
 p11_type=java.io.File
 p11_userSuppliedValuesOK=False
 p11_value=
+
 p12_MODE=
 p12_TYPE=TEXT
 p12_default_value=
@@ -57,10 +59,11 @@ p12_prefix=--motif_use_pseudocounts
 p12_prefix_when_specified=--motif_use_pseudocounts   
 p12_type=java.lang.String
 p12_userSuppliedValuesOK=False
-p12_value=
+p12_value=True;False
+
 p13_MODE=
 p13_TYPE=TEXT
-p13_default_value=
+p13_default_value=0.25,0.25,0.25,0.25
 p13_description=Background frequency for each nucleotide (comma-separated string in order of ATGC, optional)
 p13_fileFormat=
 p13_flag=--motif_background_frequencies   
@@ -72,9 +75,10 @@ p13_prefix_when_specified=--motif_background_frequencies
 p13_type=java.lang.String
 p13_userSuppliedValuesOK=False
 p13_value=
+
 p14_MODE=
 p14_TYPE=TEXT
-p14_default_value=
+p14_default_value=generated_motif_db.txt
 p14_description=Name of motif database output file (optional, will be created in current working directory)
 p14_fileFormat=
 p14_flag=--motif_output_name   
@@ -86,6 +90,7 @@ p14_prefix_when_specified=--motif_output_name
 p14_type=java.lang.String
 p14_userSuppliedValuesOK=False
 p14_value=
+
 p1_MODE=IN
 p1_TYPE=FILE
 p1_default_value=
@@ -219,4 +224,4 @@ src.repo=
 taskDoc=
 taskType=transcription factor analysis
 userid=ted
-version=Update to docker container v 16.3
+version=Adding ability to generate a motif database to run with
