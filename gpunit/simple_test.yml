@@ -10,10 +10,10 @@
 name: " -tfsites.CompareAcrossSeqsFromDNA Basic test"
 module: tfsites.CompareAcrossSeqsFromDNA
 params:
-    enhancer.DNA.alignment.table.data: "data/06-input_aligned-enhancers.tsv" 
+    enhancer.dna.alignment.table: "data/06-input_aligned-enhancers.tsv" 
     enhancer.functional.group.table: "data/06-input_group-labels.tsv"
-    tf.affinity.information:  "data/06-input_tf-affinity-info.tsv"
-    tf.affinity.files: ["data/06-input_ets1-pbm.tsv"]
+    tf.affinity.information:  "data/06-input_tf-affinity-info-http.tsv"
+    tf.affinity.files: ["https://datasets-tfsites-org.s3.us-east-2.amazonaws.com/hosted_data/pbm_affinity/02-relative-normalization/Ets1_relative-affinity-data.tsv"]
     minimum.binding.change: 0.2
     minimum.pwm.score: 0.8
     hypothesis:   "both"

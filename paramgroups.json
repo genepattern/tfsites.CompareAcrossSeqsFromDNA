@@ -19,7 +19,8 @@
             "hypothesis",
             "minimum.binding.change",
             "tf.affinity.information",
- 	        "tf.affinity.files"
+ 	    "tf.affinity.files",
+	    "pwm.input.file"
         ]
     },
      {
@@ -28,7 +29,7 @@
         "hidden": false,
         "parameters": [
             "motif.input.file",
- 	        "minimum.pwm.score",
+ 	    "minimum.pwm.score",
             "motif.input.format",
             "motif.filter.keywords",
             "motif.use.pseudocounts",
