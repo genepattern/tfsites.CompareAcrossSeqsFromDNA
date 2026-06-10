@@ -102,7 +102,7 @@ p15_name=motif.output.name
 p15_numValues=0..1
 p15_optional=on
 p15_prefix=--motif_output_name
-p15_prefix_when_specified=--motif_output_name
+p15_prefix_when_specified=--motif_output_name   
 p15_type=java.lang.String
 p15_userSuppliedValuesOK=False
 p15_value=
@@ -117,7 +117,7 @@ p16_name=motif.exact.match
 p16_numValues=0..1
 p16_optional=on
 p16_prefix=
-p16_prefix_when_specified=--motif_exact_match
+p16_prefix_when_specified=--motif_exact_match   
 p16_type=java.lang.String
 p16_userSuppliedValuesOK=False
 p16_value=FALSE\=FALSE;TRUE\=TRUE
