@@ -264,4 +264,4 @@ src.repo=
 taskDoc=
 taskType=transcription factor analysis
 userid=ted
-version=Updated docker container to version 18.0
+version=Updated docker container to version 19.0 and added exact match parameter
